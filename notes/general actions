@@ -1,0 +1,14 @@
+step:
+    1 cost, move 1 space
+
+walk:
+    2 cost, move 3 spaces
+
+run:
+    3 cost, move 5 spaces
+
+swich equipment:
+    1 cost per hand swiched
+
+unarmed attack:
+    1 cost, hit them (damage will be decided later)

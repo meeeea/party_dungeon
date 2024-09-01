@@ -1,0 +1,38 @@
+wand of 'not today' (rare):
+    litteraly just moves the target to the next room they enter
+
+glock (legendary):
+    it's a glock
+
+turtle flask:
+    thunder bomb aoe (on self)
+
+healmet of silence:
+    high thunder resistance, lower perjectile resistance
+
+sandels of gliding:
+    add 1 space to step distance
+
+shock stick:
+    lightning melee attack with self harm
+
+hevenly assension (ladder):
+    increase hight by 1, reduce run distance by 1
+
+wand of dragon's breadth (rare):
+    shove attack
+
+wand of dragon's breath:
+    cone fire attack 
+
+back pack hawacha:
+    cone pircing attack
+
+grappling hook:
+    select a target in melee, they must spend 5 action points to remove it
+
+pied pan fluet:
+    summon a rat if there are no friendly rats.
+
+wax wings:
+    move through enimies
