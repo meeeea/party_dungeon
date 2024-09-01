@@ -6,8 +6,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-class PlayState : State
-{
+class PlayState : State {
     private List<Entity> _entities = new();
 
     private List<Texture2D> _sprites = new();
@@ -68,7 +67,7 @@ class PlayState : State
                 .. GenerateDownLeft(size, newCurrent)
             ];
             
-            if (size >= step) {
+            if (size > step) {
                 tiles.AddRange(GenerateRight(size, step + 1, newCurrent));
             }
             return tiles;
@@ -77,8 +76,7 @@ class PlayState : State
         List<KeyValuePair<Texture2D, Vector2>> GenerateLeft(int size, Vector2 current) {
             Vector2 newCurrent = HelperVectorSub(current, hexRight);
             List<KeyValuePair<Texture2D, Vector2>> tiles = [
-                new KeyValuePair<Texture2D, Vector2>(_sprites[0], HelperVectorAdder(centeredHex, newCurrent)),
-                
+                new KeyValuePair<Texture2D, Vector2>(_sprites[0], HelperVectorAdder(centeredHex, newCurrent))
             ];
             if (size > 0) {
                 tiles.AddRange(GenerateLeft(size - 1, newCurrent));
@@ -96,9 +94,7 @@ class PlayState : State
             if (size > 0) {
                 tiles.AddRange(GenerateUpLeft(size - 1, newCurrent));
             }
-            if (size == 1) {
-                tiles.AddRange(GenerateUpRight(size - 1, newCurrent));
-            }
+
             return tiles;
         }
 
@@ -110,31 +106,7 @@ class PlayState : State
             if (size > 0) {
                 tiles.AddRange(GenerateDownLeft(size - 1, newCurrent));
             }
-            if (size == 1) {
-                tiles.AddRange(GenerateDownRight(size - 1, newCurrent));
-            }
-            return tiles;
-        }
 
-        List<KeyValuePair<Texture2D, Vector2>> GenerateDownRight (int size, Vector2 current) {
-            Vector2 newCurrent = HelperVectorSub(current, hexUpLeft);
-            List<KeyValuePair<Texture2D, Vector2>> tiles = [
-                new KeyValuePair<Texture2D, Vector2>(_sprites[0], HelperVectorAdder(centeredHex, newCurrent)),
-            ];
-            if (size > 0) {
-                tiles.AddRange(GenerateDownRight(size - 1, newCurrent));
-            }
-            return tiles;
-        }
-
-        List<KeyValuePair<Texture2D, Vector2>> GenerateUpRight (int size, Vector2 current) {
-            Vector2 newCurrent = HelperVectorSub(current, hexDownLeft);
-            List<KeyValuePair<Texture2D, Vector2>> tiles = [
-                new KeyValuePair<Texture2D, Vector2>(_sprites[0], HelperVectorAdder(centeredHex, newCurrent)),
-            ];
-            if (size > 0) {
-                tiles.AddRange(GenerateDownRight(size - 1, newCurrent));
-            }
             return tiles;
         }
 

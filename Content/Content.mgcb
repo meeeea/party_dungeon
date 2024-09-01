@@ -12,6 +12,7 @@
 
 
 #---------------------------------- Content ---------------------------------#
+
 #begin sprites/hex.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -23,3 +24,4 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:sprites/hex.png
+
